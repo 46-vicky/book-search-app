@@ -1,0 +1,218 @@
+*{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.pge-title{
+  color:#223ab0;
+}
+.homepage{
+  text-align: center;
+  min-height: 100vh;
+  background-color: #e2e2e2;
+}
+.search-part{
+  width:90%;
+  max-width:600px;
+  border-radius: 15px;
+  box-shadow:0px 8px 20px rgba(0,0,0,0.06);
+  border: none;
+  outline: none;
+  position: relative;
+  margin:0px auto;
+}
+.search-form{
+  transition: unset;
+}
+.dropdown{
+  position:absolute;
+  top:5px;
+  left:10px;
+}
+.current-type{
+  width:90px;
+  height:55px;
+  position: absolute;
+  top:-5px;
+  left:-10px;
+  border-radius:10px;
+  cursor: pointer;
+  user-select:none;
+}
+.current-type p{
+  line-height: 35px;
+  text-align: center;
+  padding: 10px 20px 10px 10px;
+  box-sizing: border-box;
+  margin: unset;
+  font-weight: 600;
+  color:#5b5b5b;
+  letter-spacing:.5px;
+}
+.current-type::before{
+  content: "";
+  position:absolute;
+  width:1px;
+  height:30px;
+  background-color: #cdc9c9;
+  border-radius: 5px;
+  top:10px;
+  left:90px;
+}
+.dropdown .cate-arrow{
+  position: absolute;
+  top:50%;
+  right:5px;
+  transition: .3s;
+  color:#5b5b5b;
+  transform: translateY(-50%);
+}
+.dropdown.active .cate-arrow{
+  transform: translateY(-50%) rotate(180deg);
+}
+.dropdown .filter-option{
+  width:100px;
+  position:absolute;
+  top:60px;
+  list-style: none;
+  text-align: left;
+  background-color: #fff;
+  padding:5px;
+  left:-20px;
+  border-radius: 10px;
+  transform: scale(0);
+}
+.dropdown.active .filter-option{
+  transform: scale(1);
+}
+.search-by-cat{
+  padding:5px;
+  margin: 3px 0;
+  cursor: pointer;
+  border-radius: 5px;
+  position:relative;
+}
+.search-by-cat:hover,
+.search-by-cat.active
+{
+  background-color:#f2f2f2;
+}
+.search-by-cat.active::before{
+  content:'';
+  position:absolute;
+  width:20px;
+  height:20px;
+  background-image: url("data:image/svg+xml,%3Csvg width='20px' height='20px' viewBox='0 0 25 25' fill='%230000' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.89163 13.2687L9.16582 17.5427L18.7085 8' stroke='gray' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E%3C/svg%3E");
+  background-size: 20px 20px;
+  right:2px;
+  top:6px;
+}
+.search-field{
+  width: 100%;
+  padding:15px 60px 15px 100px;
+  border:none;
+  outline: none;
+  border-radius: 10px;
+}
+.search-btn{
+  position:absolute;
+  top:0;
+  height:54px;
+  width:50px;
+  border-radius: 0 10px 10px 0;
+  outline: none;
+  border: none;
+  right:0;
+  font-size: 20px;
+  color:#223ab0;
+  background-color:#cef2ff;
+}
+.search-btn:hover{
+  background-color:#5aa6fd;
+  color:#fff;
+}
+.search-result-section{
+  padding:10px;
+  margin:20px;
+}
+.searched-books-list{
+  list-style: none;
+  display: grid;
+  grid-template-columns:repeat(auto-fill,200px);
+  justify-content: space-evenly;
+}
+.searched-books-list link{
+  text-decoration: none;
+}
+.book-prev{
+    width:185px;
+    height: fit-content;
+    margin:15px 0;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: .5s;
+}
+.book-prev:hover{
+    transform: scale(1.05);
+    background-color: #fff;
+    box-shadow: 0px 4px 13px 7px #d3d3d3;
+}
+.book-prev .book-title{
+  font-size:15px;
+  font-weight:600;
+  color: #565658;
+  margin:unset;
+  text-decoration: none;
+}
+.book-img{
+  width: 135px;
+  height:220px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  box-shadow:0px 2px 5px 0px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  background-color: #fff;
+}
+.search-topic{
+  font-size:20px;
+  text-align:left;
+  color:#565658;
+}
+.search-topic span{
+  font-size: 22px;
+  color:#223ab0;
+  font-weight: 600;
+  font-style: italic;
+}
+.trending-list-sec{
+  list-style: none;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding:10px;
+  margin:0;
+}
+.trending-list-sec li{
+  width: calc(50% - 20px);
+  text-align: left;
+  margin:0 10px;
+  font-weight: 600;
+  color:#505050;
+}
+.trending-list-sec li span{
+  font-weight: 400;
+  color:#525151;
+}
+.trend-title{
+  text-align: left;
+  font-size:23px;
+  padding:10px;
+  color:#223ab0;
+}
+.trend-title span{
+  margin:0 5px;
+}
