@@ -4,8 +4,7 @@ import { FiTrendingUp } from "react-icons/fi";
 
 const TopBooks = () => {
 const authorsList = useSelector((state)=>state.author.authorList);
-const topWorkList = useSelector((state)=>state.author.topWorkList)
-console.log(authorsList)
+const topWorkList = useSelector((state)=>state.author.topWorkList);
 const trendingList = authorsList.map((author,index)=>{
     return (<li key={index}><p>{topWorkList[index]} - <span>{author}</span></p></li>)   
 })
