@@ -33,21 +33,9 @@ export const useFetchBooks = ()=>{
                 setError(error.message)
         }
     }
-    const makeBooksRequest = async (respSubFun)=>{
-        try{
-            const doc = await fetch(`https://openlibrary.org/search/authors.json?q=*&limit=20`);
-            const result = await doc.json();
-            if (!doc.ok) {
-                throw new Error(`HTTP error! status: ${doc.status}`);
-            }
-            respSubFun(result.docs);
 
-        }catch(error){
-                setError(error.message)
-        }
-    }
 
     return{
-        fetchBooks,error,makeAuthorRequest,makeBooksRequest
-}
+        fetchBooks,error,makeAuthorRequest
+    }
 }
